@@ -1,7 +1,7 @@
 name: Activation file for Unity
 
 on: 
-  workflow_dispath: {}
+  workflow_dispatch: {}
 
 jobs:
   activation:
