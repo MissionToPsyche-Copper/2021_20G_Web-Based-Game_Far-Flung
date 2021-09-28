@@ -1,0 +1,39 @@
+# Following guide from https://game.ci, actions and packages licensed under the MIT Licence.
+
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Project Builder
+    runs-on: ubuntu-latest
+    steps:
+      # Checks out the active branch
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # This is where the test runner will go in the future
+      #
+      
+      # Builder
+      - name: Unity - Builder
+          uses: game-ci/unity-builder@v2.0-alpha-13
+          env:
+            UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          with:
+            targetPlatform: WebGL
+
+      # Output
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Build
+          path: build
+          
+
+
+
+
+
+
+
