@@ -18,7 +18,7 @@ jobs:
       
       # Builder
       - name: Unity - Builder
-          uses: game-ci/unity-builder@v2.0-alpha-13
+          uses: game-ci/unity-builder@v2
           env:
             UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           with:
