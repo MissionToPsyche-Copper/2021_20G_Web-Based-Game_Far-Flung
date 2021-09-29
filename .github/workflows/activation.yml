@@ -1,7 +1,10 @@
+# author: cboveda
+
 name: Activation file for Unity
 
 # Requires manual running from a default branch
-workflow_dispatch: {}
+on:
+  workflow_dispatch: {}
 
 jobs:
   activation:

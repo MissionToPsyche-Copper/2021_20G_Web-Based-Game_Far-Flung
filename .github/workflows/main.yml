@@ -1,4 +1,6 @@
 # Following guide from https://game.ci, actions and packages licensed under the MIT Licence.
+# 
+# author: cboveda
 
 name: Build
 on: [push, pull_request]
