@@ -1,7 +1,7 @@
 # Following guide from https://game.ci, actions and packages licensed under the MIT Licence.
 
 name: Build
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -16,6 +16,15 @@ jobs:
       - uses: webfactory/ssh-agent@v0.5.2
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # Cache library files to improve build time
+      - uses: actions/cache@v2
+        with:
+          path: /Library
+          key: Library-psyche-game-WebGL
+          restore-keys: |
+            Library-psyche-game
+            Library-
 
       # This is where the test runner will go in the future
       #
