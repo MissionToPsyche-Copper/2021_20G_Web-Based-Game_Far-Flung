@@ -1,6 +1,7 @@
 name: Activation file for Unity
 
-on: push
+# Requires manual running from a default branch
+workflow_dispatch: {}
 
 jobs:
   activation:
