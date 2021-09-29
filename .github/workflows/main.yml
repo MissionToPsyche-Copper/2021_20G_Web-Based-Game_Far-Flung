@@ -22,7 +22,7 @@ jobs:
       # Cache library files to improve build time
       - uses: actions/cache@v2
         with:
-          path: /Library
+          path: Library
           key: Library-psyche-game-WebGL
           restore-keys: |
             Library-psyche-game
