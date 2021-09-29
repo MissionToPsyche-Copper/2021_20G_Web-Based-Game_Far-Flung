@@ -22,12 +22,12 @@ jobs:
       
       # Builder
       - name: Unity - Builder
-          uses: game-ci/unity-builder@v2.0-alpha-13
-          env:
-            UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          with:
-            targetPlatform: WebGL
-            sshAgent: ${{ env.SSH_AUTH_SOCK }}
+        uses: game-ci/unity-builder@v2.0-alpha-13
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: WebGL
+          sshAgent: ${{ env.SSH_AUTH_SOCK }}
 
       # Output
       - uses: actions/upload-artifact@v2
