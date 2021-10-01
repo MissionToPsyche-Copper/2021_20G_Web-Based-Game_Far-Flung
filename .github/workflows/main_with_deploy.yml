@@ -1,12 +1,10 @@
-# Following guide from https://game.ci, actions and packages licensed under the MIT Licence.
-# 
 # author: cboveda
 
 name: Build and Deploy
 on:
   push:
     branches:
-      - 'US19'    #temporary, for testing
+      - 'main'
 
 jobs:
   build:
