@@ -57,14 +57,14 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: build
+          name: /home/runner/work/psyche-game/psyche-game/build
       - name: Extract artifact
         run: unzip build.zip
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-page
-          folder: build/WebGL/WebGL
+          folder: /home/runner/work/psyche-game/psyche-game/build/WebGL/WebGL
 
 
 
