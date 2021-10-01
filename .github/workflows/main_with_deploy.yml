@@ -59,7 +59,7 @@ jobs:
         with:
           name: build
       - name: Extract artifact
-        run: unzip build.zip
+        run: unzip /home/runner/work/psyche-game/psyche-game/build.zip
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
