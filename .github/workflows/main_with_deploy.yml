@@ -78,7 +78,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-page
-          folder: ${{ steps.download.outputs.download-path }}
+          folder: ${{ steps.download.outputs.download-path }}/WebGL/WebGL
 
 
 
