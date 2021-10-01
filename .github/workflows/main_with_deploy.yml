@@ -57,7 +57,7 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v2
         with:
-          name: /home/runner/work/psyche-game/psyche-game/build
+          name: build
       - name: Extract artifact
         run: unzip build.zip
       - name: Deploy to GitHub Pages
