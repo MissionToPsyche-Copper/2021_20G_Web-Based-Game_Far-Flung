@@ -66,8 +66,8 @@ jobs:
         run: echo ${{ steps.download.outputs.download-path }}
 
       # Extract artifact
-      - name: Extract artifact
-        run: unzip ${{ steps.download.outputs.download-path }}/build.zip
+      #- name: Extract artifact
+      #  run: unzip ${{ steps.download.outputs.download-path }}/build.zip
 
       # Deploy the root of the index.html
       - name: Deploy to GitHub Pages
