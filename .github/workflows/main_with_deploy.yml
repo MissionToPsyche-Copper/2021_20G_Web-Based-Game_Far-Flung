@@ -54,17 +54,27 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      # Download the artifact
       - name: Download artifact
+        id: download
         uses: actions/download-artifact@v2
         with:
           name: build
+      
+      # Find the artifact
+      - name: Echo download path
+        run: echo ${{ steps.download.outputs.download-path }}
+
+      # Extract artifact
       - name: Extract artifact
-        run: unzip /home/runner/work/psyche-game/psyche-game/build.zip
+        run: unzip ${{ steps.download.outputs.download-path }}/build.zip
+
+      # Deploy the root of the index.html
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-page
-          folder: /home/runner/work/psyche-game/psyche-game/build/WebGL/WebGL
+          folder: ${{ steps.download.outputs.download-path }}/build/WebGL/WebGL
 
 
 
