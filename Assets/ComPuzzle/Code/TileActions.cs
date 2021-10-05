@@ -29,6 +29,9 @@ public class TileActions : MonoBehaviour
         currentColor = rend.color;
     }
 
+
+
+
     void OnMouseEnter()
     {
         // highlight tile
