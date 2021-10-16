@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Codice.Client.GameUI.Explorer;
 using UnityEngine;
 
 public class Completion : MonoBehaviour
@@ -20,6 +22,8 @@ public class Completion : MonoBehaviour
             }
             
         }
-        Debug.Log("All slots completed");
+        // GameObject textPanel = Resources.FindObjectsOfTypeAll<TextPanel>()[0].gameObject;
+        // textPanel.SetActive(true);
+        // StartCoroutine(textPanel.GetComponent<TextPanel>().button.GetComponent<ButtonFunctions>().CloseOnClick(() => Debug.Log("All Slots Completed")));
     }
 }

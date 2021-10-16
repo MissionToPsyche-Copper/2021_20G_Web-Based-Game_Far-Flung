@@ -14,16 +14,23 @@ public class DropSlot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
                 GetComponent<RectTransform>().anchoredPosition + slotOffset;
             Debug.Log("User has placed " + slotMatch.name);
+            GameObject textPanel = Resources.FindObjectsOfTypeAll<TextPanel>()[0].gameObject;
+            textPanel.SetActive(true);
 
-            //calls the parent to check if all the slots are completed
-            if (transform.parent.GetComponent<Completion>() != null)
-            {
-                transform.parent.GetComponent<Completion>().CheckCompletion();
-            }
-            else
-            {
-                Debug.Log("Parent does not have a completion script");
-            }
+            StartCoroutine( textPanel.GetComponent<TextPanel>().button.GetComponent<ButtonFunctions>().CloseOnClick(CallParentCompletion));
+
+        }
+    }
+
+    public void CallParentCompletion()
+    {
+        if (transform.parent.GetComponent<Completion>() != null)
+        {
+            transform.parent.GetComponent<Completion>().CheckCompletion();
+        }
+        else
+        {
+            Debug.Log("Parent does not have a completion script");
         }
     }
 
