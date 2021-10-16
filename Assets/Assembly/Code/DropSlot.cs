@@ -6,6 +6,7 @@ public class DropSlot : MonoBehaviour, IDropHandler
 {
     public Vector2 slotOffset;
     public GameObject slotMatch;
+    public TextAsset completionText;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -14,10 +15,8 @@ public class DropSlot : MonoBehaviour, IDropHandler
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
                 GetComponent<RectTransform>().anchoredPosition + slotOffset;
             Debug.Log("User has placed " + slotMatch.name);
-            GameObject textPanel = Resources.FindObjectsOfTypeAll<TextPanel>()[0].gameObject;
-            textPanel.SetActive(true);
-
-            StartCoroutine( textPanel.GetComponent<TextPanel>().button.GetComponent<ButtonFunctions>().CloseOnClick(CallParentCompletion));
+            Resources.FindObjectsOfTypeAll<TextPanel>()[0].ShowText(completionText, CallParentCompletion);
+            
 
         }
     }

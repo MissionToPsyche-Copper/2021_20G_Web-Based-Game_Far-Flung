@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButtonFunctions : MonoBehaviour
+public class TextPanelButton : MonoBehaviour
 {
-    public Button button;
     private bool clicked;
 
     public IEnumerator CloseOnClick(Action doAfterClick)
@@ -29,9 +28,5 @@ public class ButtonFunctions : MonoBehaviour
     public void Clicked()
     {
         clicked = true;
-    }
-    public void HideText()
-    {
-        Debug.Log("Hide the text");
     }
 }

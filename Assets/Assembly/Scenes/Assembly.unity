@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotOffset: {x: 35, y: 110}
   slotMatch: {fileID: 638276046}
+  completionText: {fileID: 4900000, guid: 0659008030dbba54288236fe07511093, type: 3}
 --- !u!114 &91097064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbc3c550b49accf46b07beb3193c6703, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 2088694876}
+  mainText: {fileID: 413583035}
+  textPanelButton: {fileID: 2088694879}
 --- !u!1 &318922393
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotOffset: {x: 32, y: 109}
   slotMatch: {fileID: 1557097174}
+  completionText: {fileID: 4900000, guid: 2d97f385385904c46be2201e9033da9e, type: 3}
 --- !u!114 &318922396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,6 +779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotOffset: {x: 30, y: 110}
   slotMatch: {fileID: 1633703359}
+  completionText: {fileID: 4900000, guid: 705bf8751a828d443ad94b0491d657db, type: 3}
 --- !u!114 &465832171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1097,6 +1101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotOffset: {x: 0, y: 0}
   slotMatch: {fileID: 0}
+  completionText: {fileID: 0}
 --- !u!114 &1251495989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,7 +1286,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Continue
 --- !u!222 &1574948618
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1538,7 +1543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc574ba362ea7ea49a8bc66d2e251c69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: {fileID: 0}
 --- !u!1 &2147155405
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,6 @@ public class Completion : MonoBehaviour
         }
         // GameObject textPanel = Resources.FindObjectsOfTypeAll<TextPanel>()[0].gameObject;
         // textPanel.SetActive(true);
-        // StartCoroutine(textPanel.GetComponent<TextPanel>().button.GetComponent<ButtonFunctions>().CloseOnClick(() => Debug.Log("All Slots Completed")));
+        // StartCoroutine(textPanel.GetComponentInChildren<TextPanelButton>().CloseOnClick(() => Debug.Log("All Slots Completed")));
     }
 }
